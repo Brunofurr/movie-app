@@ -1,0 +1,33 @@
+.person-card-highlight {
+    width: 156px;
+    margin-right: 1.5rem;
+
+    .person-card-highlight__background {
+        position: relative;
+        width: 100%;
+        height: 225px;
+        background-color: #eaeaea;
+        border-radius: 0.5rem;
+        margin-bottom: -0.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .person-card-highlight__info {
+        background-color: #fff;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        padding: 2rem .5rem 1rem;
+
+        h3 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

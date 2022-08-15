@@ -1,0 +1,3 @@
+<div class="section-switcher">
+    <button type="button" class="section-switcher__button" [class.section-switcher__button--highlight]="isButtonSelected(iLabel)"  *ngFor="let label of labels;let iLabel = index" (click)="setSelected(iLabel)">{{ label }}</button>
+</div>

@@ -1,0 +1,9 @@
+<div class="movie-card-highlight" (click)="getMovieDetail()">
+    <div class="movie-card-highlight__background" [ngStyle]="getMovieCover()">
+        <app-score [score]="movie?.vote_average" [left]="'.5rem'" [bottom]="'-1rem'"></app-score>
+    </div>
+    <div class="movie-card-highlight__info">
+        <h3>{{ movie?.original_title }}</h3>
+        <p>{{ movie?.release_date | date }}</p>
+    </div>
+</div>

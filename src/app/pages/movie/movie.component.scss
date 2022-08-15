@@ -1,0 +1,37 @@
+.movie-detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #fff;
+    padding: 3rem 1.5rem;
+    background-color: #1b1b1b;
+
+    @media (min-width: 992px) {
+        flex-direction: row;
+    }
+    
+    &__cover {
+        width: 100%;
+
+        @media (min-width: 992px) {
+            width: 40%;
+        }
+    }
+
+    &__info {
+        width: 100%;
+
+        @media (min-width: 992px) {
+            width: 60%;
+        }
+    }
+}
+
+.movie-credits {
+    padding: 1.5rem 1rem 1rem;
+    
+    @media (min-width: 992px) {
+        padding: 3rem 1.5rem;
+    }
+    
+}

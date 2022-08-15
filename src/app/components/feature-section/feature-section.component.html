@@ -1,0 +1,26 @@
+<section class="feature-section">
+    <div class="feature-section__header">
+        <h2>{{ title }}</h2>
+        <app-section-switcher *ngIf="sectionLabels.length" [labels]="sectionLabels"></app-section-switcher>
+        <!-- <button *ngIf="movies.length" class="link-button" type="button" (click)="handleShowMore()">
+            <fa-icon [icon]="iconPlus"></fa-icon>
+            Ver Mais
+        </button> -->
+    </div>
+    <div class="feature-section__content" [ngClass]="hasScroll ? 'feature-section__content--hasScroll' : 'feature-section__content--noScroll'">
+        <ng-container *ngIf="movies.length">
+            <app-movie-card-highlight *ngFor="let movie of movies; let iMovie = index" [movie]="movie" (sendMovieDetail)="handleMovieDetail($event)"></app-movie-card-highlight>
+        </ng-container>
+
+        <ng-container *ngIf="cast.length">
+            <app-person-card-highlight *ngFor="let person of cast; let iPerson = index" [person]="person"></app-person-card-highlight>
+        </ng-container>
+
+        <ng-container *ngIf="reviews.length">
+            <div class="feature-section__content__reviews">
+                <app-review-card *ngFor="let review of reviews; let iReview = index" [review]="review"></app-review-card>
+            </div>
+        </ng-container>
+
+    </div>
+</section>

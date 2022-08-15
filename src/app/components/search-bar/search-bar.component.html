@@ -1,0 +1,14 @@
+<form class="w-100" [formGroup]="form">
+    <div class="search-bar">
+        <input formControlName="search" class="search-bar__input" placeholder="Buscar por um Filme, Série ou Pessoa..." />
+        <button type="button" class="search-bar__button" [class.search-bar__button--disabled]="searchDisabled()" [disabled]="searchDisabled()" (click)="getSearch()">
+            <fa-icon class="search-bar__icon" [icon]="iconSearch"></fa-icon>
+            Pesquisar
+        </button>
+    </div>
+    <button *ngIf="query.length" class="link-button" type="button" (click)="resetSearch()">
+        <fa-icon [icon]="iconXmark"></fa-icon>
+        Limpar
+    </button>
+</form>
+<h2 class="noResult" *ngIf="!results.length && query.length">Sem resultados para: {{ query }}</h2>

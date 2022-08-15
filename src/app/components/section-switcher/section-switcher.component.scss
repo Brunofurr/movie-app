@@ -1,0 +1,18 @@
+.section-switcher {
+
+    &__button {
+        font-size: 1rem;
+        height: 100%;
+        color: #fff;
+        font-weight: 600;
+        padding: .25rem .5rem;
+        border-color: transparent;
+        border-radius: 1rem;
+        background-color: transparent;
+    }
+
+    &__button--highlight {
+        background: linear-gradient(to right, rgba(30,213,169, 1) 0%, rgba(1,180,228, 1) 100%);
+    }
+
+}

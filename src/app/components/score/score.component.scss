@@ -1,0 +1,18 @@
+.score {
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    &__percent {
+        color: #fff;
+        margin: 0 0 0 0.25rem;
+        
+        sup {
+            font-size: .5rem;
+        }
+    }
+}
+

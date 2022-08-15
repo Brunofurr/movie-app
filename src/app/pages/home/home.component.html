@@ -1,0 +1,16 @@
+<section class="home-page">
+    <div class="container">
+        <app-search-bar (sendResultMovie)="handleMovieResult($event)" class="w-100"></app-search-bar>
+    </div>
+    <div class="container-fluid">
+        <div *ngIf="moviesResult.length">
+            <app-feature-section [sectionGroupName]="'searchResults'" [title]="'Resultado para: ' + queryResult" [movies]="moviesResult"  [hasScroll]="true" (sendShowMore)="showMore($event)"></app-feature-section>
+        </div>
+    </div>
+    <div *ngIf="moviesPlayingNow.length" class="container-fluid">
+        <app-feature-section [sectionGroupName]="'playingNow'" [title]="'Filmes em Cartaz'" [movies]="moviesPlayingNow" [hasScroll]="true" (sendShowMore)="showMore($event)"></app-feature-section>
+    </div>
+    <div *ngIf="moviesUpcoming.length" class="container-fluid">
+        <app-feature-section [sectionGroupName]="'upcoming'" [title]="'Próximos Lançamentos'" [movies]="moviesUpcoming" [hasScroll]="true" (sendShowMore)="showMore($event)"></app-feature-section>
+    </div>
+</section>

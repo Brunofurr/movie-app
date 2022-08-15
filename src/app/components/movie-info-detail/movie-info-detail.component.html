@@ -1,0 +1,22 @@
+<section>
+    <div class="movie-info-detail">
+        <div class="movie-info-detail__header">
+            <h1 class="title">{{ movie?.original_title }}</h1>
+            <div class="movie-main-info subtitle">
+                <p>{{ movie?.release_date | date: 'dd/MM/yyyy' }}</p>
+                <p>•</p>
+                <p> {{ getMovieGenre(movie) }}</p>
+                <p>•</p>
+                <p>{{ getMovieRuntime(movie) }}</p>
+            </div>
+        </div>
+        <div class="movie-info-detail__subheader">
+            <app-score [score]="movie?.vote_average" [size]="60"></app-score>
+        </div>
+        <div class="movie-info-detail__description">
+            <h4>{{ movie?.tagline }}</h4>
+            <h3>Sinopse</h3>
+            <p>{{ movie?.overview }}</p>
+        </div>
+    </div>
+</section>

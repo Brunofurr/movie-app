@@ -1,0 +1,9 @@
+<div class="movie-review">
+    <div class="movie-review__user">
+        <app-avatar [size]="44" [path]="review?.author_details?.avatar_path"></app-avatar>
+    </div>
+    <div class="movie-review__content">
+        <h3>Escrita por {{ review?.author }} em {{ review?.created_at | date }}</h3>
+        <p>{{ review?.content }}</p>
+    </div>
+</div>

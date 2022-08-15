@@ -1,0 +1,43 @@
+.feature-section {
+    padding: 1.5rem 1rem 1rem;
+
+    @media (min-width: 992px) {
+        padding: 1.5rem 1rem;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            color: #fff;
+            font-weight: 600;
+            margin-right: 1.5rem;
+            font-size: 1rem;
+
+            @media (min-width: 576px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        padding-bottom: 2rem;
+
+        &--hasScroll {
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+        }
+
+        &--noScroll {
+            flex-wrap: wrap;
+        }
+
+        &__reviews {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

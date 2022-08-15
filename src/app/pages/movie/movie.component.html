@@ -1,0 +1,23 @@
+<section>
+    <div class="movie-detail">
+        <div class="movie-detail__cover">
+            <app-movie-card-cover [movie]="movieDetail"></app-movie-card-cover>
+        </div>
+        <div class="movie-detail__info">
+            <app-movie-info-detail [movie]="movieDetail"></app-movie-info-detail>
+        </div>
+    </div>
+    <div class="movie-credits">
+        <div *ngIf="cast?.length" class="container-fluid">
+            <app-feature-section [sectionGroupName]="'cast'" [title]="'Elenco Principal'" [cast]="cast" [hasScroll]="true" (sendShowMore)="showMore($event)"></app-feature-section>
+        </div>
+    </div>
+    <div class="movie-reviews">
+        <div *ngIf="reviews.length" class="container-fluid">
+            <app-feature-section [sectionGroupName]="'review'" [title]="'Reviews'" [reviews]="reviews" [hasScroll]="false" (sendShowMore)="showMore($event)"></app-feature-section>
+        </div>
+    </div>
+    <div *ngIf="movieRecommendations.length" class="movie-recommendations">
+        <app-feature-section [movies]="movieRecommendations" [sectionGroupName]="'recommendations'" [title]="'Recomendações'" [hasScroll]="true" (sendShowMore)="showMore($event)"></app-feature-section>
+    </div>
+</section>
